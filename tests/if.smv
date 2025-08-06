@@ -1,0 +1,9 @@
+MODULE main
+  IVAR
+    a: boolean;
+    b: boolean;
+    c: boolean;
+    d: boolean;
+  DEFINE
+    result := a ? 0 : b ? 1 : c ? 2 : d ? 3 : 4;
+  INVARSPEC result = 5;

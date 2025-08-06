@@ -1,0 +1,15 @@
+MODULE main
+VAR
+  prev_fib : integer;
+  fib : integer;
+  n : integer;
+ASSIGN
+  init(n) := 2;
+  next(n) := n + 1;
+
+  init(prev_fib) := 1;
+  next(prev_fib) := fib;
+
+  init(fib) := 1;
+  next(fib) := prev_fib + fib;
+INVARSPEC n < 10;

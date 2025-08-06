@@ -1,0 +1,33 @@
+$date
+Monday 2024/09/09  20:15:29
+$end
+$version PONO $end
+$timescale 1 ns $end
+$var reg 2 v4 counter[1:0] $end
+$var reg 2 v2 previous[1:0] $end
+$var wire 1 v5 clk $end
+$var wire 1 v0 prop_cex $end
+$var wire 1 v1 prop_proven $end
+$var wire 1 v3 rstn $end
+$enddefinitions $end
+#0
+b1 v0
+b1 v1
+b00 v2
+b1 v3
+b00 v4
+b0 v5
+#1
+b01 v4
+#2
+b01 v2
+b10 v4
+#3
+b10 v2
+b11 v4
+#4
+b0 v0
+b11 v2
+b0 v3
+b00 v4
+#5

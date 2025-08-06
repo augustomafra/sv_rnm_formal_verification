@@ -1,0 +1,12 @@
+MODULE main
+IVAR
+  d : real;
+VAR
+  res   : real;
+INIT
+  res >= 0.0
+TRANS
+  d >= 0.0 & d <= 0.01
+INVARSPEC res <= 0.3;
+
+
