@@ -49,7 +49,7 @@ chformal -lower
 setundef -undriven -expose
 
 # This writes to a file in SMV format
-write_json maurice2024_adc.json
+#write_json maurice2024_adc.json
 write_smv maurice2024_adc.smv
 #write_rtlil maurice2024_adc.rtlil
 #write_btor maurice2024_adc.btor2

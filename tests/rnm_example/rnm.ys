@@ -49,8 +49,8 @@ chformal -lower
 setundef -undriven -expose
 
 # This writes to a file in BTOR2 format
-write_json rnm.json
-write_rtlil rnm.rtlil
-write_btor rnm.btor2
+#write_json rnm.json
+#write_rtlil rnm.rtlil
+#write_btor rnm.btor2
 write_smv rnm.smv
-write_smt2 rnm.smt2
+#write_smt2 rnm.smt2
