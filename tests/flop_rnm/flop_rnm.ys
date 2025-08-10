@@ -1,7 +1,7 @@
 # read in the file(s) -- there can be multiple
 # whitespace separated files, and you can
 # escape new lines if necessary
-read_verilog -sv -formal -rnm flop_rnm.sv
+read_verilog -I../../util -DRNM -sv -formal -rnm flop_rnm.sv
 
 # prep does a conservative elaboration
 # of the top module provided
@@ -49,8 +49,8 @@ chformal -lower
 setundef -undriven -expose
 
 # This writes to a file in BTOR2 format
-write_json flop_rnm.json
-write_rtlil flop_rnm.rtlil
-write_btor flop_rnm.btor2
+#write_json flop_rnm.json
+#write_rtlil flop_rnm.rtlil
+#write_btor flop_rnm.btor2
 write_smv flop_rnm.smv
-write_smt2 flop_rnm.smt2
+#write_smt2 flop_rnm.smt2

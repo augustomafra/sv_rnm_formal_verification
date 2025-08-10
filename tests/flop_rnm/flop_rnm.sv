@@ -1,26 +1,21 @@
-module main(input clk, rst, input real incr, output real q);
-    real past_q;
-    real past_incr;
+`include "formal_rnm.sv"
 
+module main(input clk, rst, input real incr, output real q);
     always @(posedge clk) begin
         if (rst) begin
             q <= 0.0;
-            past_q <= 0.0;
-            past_incr <= 0.0;
         end else begin 
             q <= q + incr;
-            past_q <= q;
-            past_incr <= incr;
         end
     end
+
+    `REG_PAST(real, q, clk, rst, 0.0)
+    `REG_PAST(real, incr, clk, rst, 0.0)
 
     // Problem assumptions:
     wire increasing = past_incr > 0.0;
 
-    // (Negated) assumptions constraining NaN and Inf Floating-Point values:
-    wire q_is_NaN = !(past_q < 0.0) && !(past_q >= 0.0);
-    wire q_is_Inf = past_q + 1.0 == past_q;
-    
+    // Assumptions constraining NaN and Inf Floating-Point values:
     // Assertion: (increasing && !isNaN && !isInf) |=> past_q <= q
-    assert property (!increasing || q_is_NaN || q_is_Inf || past_q <= q);
+    assert property (!increasing || `is_nan(past_q) || `is_inf(past_q) || past_q <= q);
 endmodule
