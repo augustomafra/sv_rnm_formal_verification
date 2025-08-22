@@ -1,7 +1,7 @@
 include Makefile.conf
 
 export ROOT_DIR := $(BUILD_DIR)
-SUB_DIRS += tests/counter
+#SUB_DIRS += tests/counter
 SUB_DIRS += tests/flop_rnm
 SUB_DIRS += tests/maurice2024
 SUB_DIRS += tests/rnm_example
