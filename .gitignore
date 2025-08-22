@@ -1,3 +1,6 @@
 confidential/*
 tmp/*
+.vscode/*
 *.json
+*.log
+*.log.bak
