@@ -1,0 +1,25 @@
+# This is a common template to be included on each subdirectory
+# Each subdirectory must define the variables below before including this:
+# 	- ROOT_DIR: 				path of the root of the repository
+# 	- TARGET: 					name of the SMV file
+# 	- LOG_FILE: 				path for output log file
+# 	- PROVE_ARGS (optional)		arguments for $(PROVE_CMD)
+
+.PHONY: all clean build prove
+
+all: prove
+
+prove: build
+	@echo "$(PROVE_CMD)" > $(LOG_FILE)
+	$(PROVE_CMD)
+
+build: $(TARGET)
+
+%.smv: %.sv
+	$(BUILD) $(BUILD_ARGS) $(?:.sv=.ys)
+
+backup:
+	cp $(LOG_FILE) $(LOG_FILE).bak
+
+clean:
+	$(RM) $(TARGET)
