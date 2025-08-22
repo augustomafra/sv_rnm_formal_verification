@@ -17,6 +17,11 @@ module main
         endcase
     end
     
-    assert property (Vdac >= 0.0 && Vdac <= Vref_L);
+    assert property (
+        (!(i_Sprg == 1'b0 && i_Ssmpl == 1'b0) || Vdac == Vdac_mat) &&
+        (!(i_Sprg == 1'b0 && i_Ssmpl == 1'b1) || Vdac == i_Vin) &&
+        (!(i_Sprg == 1'b1 && i_Ssmpl == 1'b0) || Vdac == Vref_L) &&
+        (!(i_Sprg == 1'b1 && i_Ssmpl == 1'b1) || Vdac == (i_Vin+Vref_L)/2.0)
+    );
 endmodule
 
