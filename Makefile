@@ -10,12 +10,14 @@ MAKEFILES += tests/flop_rnm/Makefile
 MAKEFILES += tests/maurice2024/Makefile
 MAKEFILES += tests/rnm_example/Makefile
 
-.PHONY: all clean build prove
+.PHONY: all clean build prove $(MAKEFILES)
 
 all: prove
 
-prove: build
-	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
+prove: build $(MAKEFILES)
+
+$(MAKEFILES):
+	$(MAKE) -C $(dir $@) -f $(notdir $@) prove
 
 build:
 	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
