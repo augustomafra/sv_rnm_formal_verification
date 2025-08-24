@@ -1,0 +1,8 @@
+include ../../../../Makefile.conf
+
+ROOT_DIR := $(BUILD_DIR)/../../../../
+TARGET := dac.smv
+LOG_FILE := $(TARGET:.smv=_prop0.log)
+PROVE_ARGS += --reset=_rst --prop=0
+
+include ../../../../Makefile.build

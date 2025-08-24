@@ -1,26 +1,27 @@
 include Makefile.conf
 
 export ROOT_DIR := $(BUILD_DIR)
-SUB_DIRS += tests/arithmetic
-SUB_DIRS += tests/capacitor
-#SUB_DIRS += tests/counter
-SUB_DIRS += tests/designers_guide/ch4-listing09/listing09
-SUB_DIRS += tests/flop_rnm
-SUB_DIRS += tests/maurice2024
-SUB_DIRS += tests/rnm_example
+MAKEFILES += tests/arithmetic/Makefile
+MAKEFILES += tests/capacitor/Makefile
+#MAKEFILES += tests/counter/Makefile
+MAKEFILES += tests/designers_guide/ch4-listing09/listing09/Makefile.prop0
+MAKEFILES += tests/designers_guide/ch4-listing09/listing09/Makefile.prop1
+MAKEFILES += tests/flop_rnm/Makefile
+MAKEFILES += tests/maurice2024/Makefile
+MAKEFILES += tests/rnm_example/Makefile
 
 .PHONY: all clean build prove
 
 all: prove
 
 prove: build
-	$(foreach subdir,$(SUB_DIRS),$(MAKE) -C $(subdir) $@;)
+	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
 
 build:
-	$(foreach subdir,$(SUB_DIRS),$(MAKE) -C $(subdir) $@;)
+	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
 
 backup:
-	$(foreach subdir,$(SUB_DIRS),$(MAKE) -C $(subdir) $@;)
+	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
 
 clean:
-	$(foreach subdir,$(SUB_DIRS),$(MAKE) -C $(subdir) $@;)
+	$(foreach makefile,$(MAKEFILES),$(MAKE) -C $(dir $(makefile)) -f $(notdir $(makefile)) $@;)
