@@ -4,6 +4,7 @@ export ROOT_DIR := $(BUILD_DIR)
 SUB_DIRS += tests/arithmetic
 SUB_DIRS += tests/capacitor
 #SUB_DIRS += tests/counter
+SUB_DIRS += tests/designers_guide/ch4-listing09/listing09
 SUB_DIRS += tests/flop_rnm
 SUB_DIRS += tests/maurice2024
 SUB_DIRS += tests/rnm_example
