@@ -92,8 +92,8 @@ MODULE main
     _$flatten#adc##enc_i#$or$maurice2022_flash_adc#sv#87$100_Y := resize(_adc#comp_i#D1, 1) | resize(_adc#comp_i#D3, 1);
     _$flatten#adc##enc_i#$or$maurice2022_flash_adc#sv#87$101_Y := resize(_$flatten#adc##enc_i#$or$maurice2022_flash_adc#sv#87$100_Y, 1) | resize(_adc#comp_i#D5, 1);
     _2 := resize(_$flatten#adc##enc_i#$or$maurice2022_flash_adc#sv#87$101_Y, 1) | resize(_adc#comp_i#D7, 1);
-    _$eq$dac_adc#sv#17$1_Y := resize(word1(resize(_Q, 3) = resize((((_1[0:0]) :: _0[0:0]) :: _2[0:0]), 3)), 1);
-    _$auto$rtlil#cc#2837#Not$554 := !resize(_$eq$dac_adc#sv#17$1_Y, 1);
+    _$eq$dac_adc#sv#13$1_Y := resize(word1(resize(_Q, 3) = resize((((_1[0:0]) :: _0[0:0]) :: _2[0:0]), 3)), 1);
+    _$auto$rtlil#cc#2837#Not$554 := !resize(_$eq$dac_adc#sv#13$1_Y, 1);
     _$auto$rtlil#cc#2884#And$556 := resize(_$auto$rtlil#cc#2837#Not$554, 1) & resize(0ub1_1, 1);
     _adc#enc_i#Q := _1[0:0] :: _0[0:0] :: _2[0:0];
     _VSUP := 1.00000000000000000;
@@ -189,5 +189,5 @@ MODULE main
     _adc#vref6 := 0.75000000000000000;
     _adc#vref7 := 0.87500000000000000;
     _adc#vref8 := 1.00000000000000000;
-  INVARSPEC !bool(0ub1_1) | bool(_$eq$dac_adc#sv#17$1_Y);
+  INVARSPEC !bool(0ub1_1) | bool(_$eq$dac_adc#sv#13$1_Y);
 -- end of yosys output

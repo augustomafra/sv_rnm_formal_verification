@@ -1,7 +1,7 @@
 # read in the file(s) -- there can be multiple
 # whitespace separated files, and you can
 # escape new lines if necessary
-read_verilog -I../../util -sv -formal -rnm maurice2024_adc.sv maurice2022_flash_adc.sv
+read_verilog -I../../util -sv -formal -rnm maurice2024_adc.sv maurice2022_flash_adc.sv resis_div.sv
 
 # prep does a conservative elaboration
 # of the top module provided

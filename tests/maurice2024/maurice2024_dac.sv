@@ -12,6 +12,7 @@ input reg [n-1:0] Q;
 
 // output from Mariam Maurice, 2022, Modeling Analog Devices using SV-RNM
 real VOUT_A;
+r_string_dac #(.n(n)) dut(Q, VSUP, VOUT_A);
 
 // VARIABLES
 real delta;

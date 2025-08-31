@@ -10,7 +10,9 @@ MAKEFILES += tests/designers_guide/ch4/listing09/Makefile.prop1
 MAKEFILES += tests/designers_guide/ch4/listing12/Makefile
 MAKEFILES += tests/flop_rnm/Makefile
 MAKEFILES += tests/maurice2024/Makefile.adc
+MAKEFILES += tests/maurice2024/Makefile.adc_dac
 MAKEFILES += tests/maurice2024/Makefile.dac
+MAKEFILES += tests/maurice2024/Makefile.dac_adc
 MAKEFILES += tests/rnm_example/Makefile
 
 .PHONY: all clean build prove $(MAKEFILES)

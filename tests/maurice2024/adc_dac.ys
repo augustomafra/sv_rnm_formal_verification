@@ -1,7 +1,7 @@
 # read in the file(s) -- there can be multiple
 # whitespace separated files, and you can
 # escape new lines if necessary
-read_verilog -I../../util -sv -formal -rnm maurice2024_dac.sv maurice2022_r_string_dac.sv resis_div.sv
+read_verilog -I../../util -sv -formal -rnm adc_dac.sv maurice2022_r_string_dac.sv maurice2022_flash_adc.sv resis_div.sv
 
 # prep does a conservative elaboration
 # of the top module provided
@@ -49,8 +49,8 @@ chformal -lower
 setundef -undriven -expose
 
 # This writes to a file in SMV format
-#write_json maurice2024_dac.json
-write_smv maurice2024_dac.smv
-#write_rtlil maurice2024_dac.rtlil
-#write_btor maurice2024_dac.btor2
-#write_smt2 maurice2024_dac.smt2
+#write_json adc_dac.json
+write_smv adc_dac.smv
+#write_rtlil adc_dac.rtlil
+#write_btor adc_dac.btor2
+#write_smt2 adc_dac.smt2
