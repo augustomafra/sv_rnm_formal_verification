@@ -10,7 +10,7 @@
 all: prove
 
 prove: build
-	@echo "$(PROVE_CMD)" > $(LOG_FILE)
+	echo "$(PROVE_CMD)" > $(LOG_FILE_WITH_CONFIGS)
 	$(PROVE_CMD)
 
 build: $(TARGET)
@@ -19,7 +19,7 @@ build: $(TARGET)
 	$(BUILD) $(BUILD_ARGS) $(?:.sv=.ys)
 
 backup:
-	cp $(LOG_FILE) $(LOG_FILE).bak
+	cp $(LOG_FILE_WITH_CONFIGS) $(LOG_FILE_WITH_CONFIGS).bak
 
 clean:
 	$(RM) $(TARGET)
