@@ -2,7 +2,7 @@
 
 while IFS= read -r line
 do
-    fp_values=$(grep -o '(fp ([^)]*) ([^)]*) ([^)]*))' <<< ${line})
+    fp_values=$(grep -o '(fp ([^)]*) ([^)]*) ([^)]*))\|(fp #b[01]* #b[01]* #b[01]*)' <<< ${line})
 
     converted_to_real=""
     while IFS= read -r fp_value
@@ -39,20 +39,20 @@ do
             is_nan=$(grep 'is_nan true' <<< "${out}")
             if [ ! -z "${is_nan}" ]
             then
-                sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\)~\1 ((as_real NaN))~g" <<< "${line}"
+                sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\|(fp #b[01]* #b[01]* #b[01]*)\)~\1 ((as_real NaN))~g" <<< "${line}"
                 converted_to_real="${is_nan}"
             else
                 is_infinite=$(grep 'is_infinite true' <<< "${out}")
                 if [ ! -z "${is_infinite}" ]
                 then
-                    sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\)~\1 ((as_real Inf))~g" <<< "${line}"
+                    sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\|(fp #b[01]* #b[01]* #b[01]*)\)~\1 ((as_real Inf))~g" <<< "${line}"
                     converted_to_real="${is_infinite}"
                 else
                     as_real=$(grep 'as_real' <<< "${out}")
                     is_subnormal=$(grep 'is_subnormal true' <<< "${out}")
                     if [ ! -z "${as_real}" ]
                     then
-                        sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\)~\1 ${as_real} ${is_subnormal}~g" <<< "${line}" 
+                        sed "s~\((fp ([^)]*) ([^)]*) ([^)]*))\|(fp #b[01]* #b[01]* #b[01]*)\)~\1 ${as_real} ${is_subnormal}~g" <<< "${line}"
                         converted_to_real="${as_real}"
                     fi                  
                 fi          
