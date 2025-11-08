@@ -7,8 +7,10 @@ module main;
     real nondet;
     real positive;
     assign positive = nondet < 0.0 ? 0.0 - nondet : nondet;
+    real less_than_1;
+    assign less_than_1 = positive > 1.0 ? 1.0 : positive;
     real adc_in;
-    assign adc_in = positive > 1.0 ? 1.0 : positive;
+    assign adc_in = `is_nan(less_than_1) || `is_inf(less_than_1) ? 0.0 : less_than_1;
 
     logic [0:bits-1] adc_out;
     real dac_out;

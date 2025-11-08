@@ -6,8 +6,9 @@ module main;
     real nondet;
     real positive;
     assign positive = nondet < 0.0 ? 0.0 - nondet : nondet;
-    real in;
-    assign in = positive > 1.0 ? 1.0 : positive;
+    real less_than_1;
+    assign less_than_1 = positive > 1.0 ? 1.0 : positive;
+    real in = `is_nan(less_than_1) || `is_inf(less_than_1) ? 0.0 : less_than_1;
     logic clk;
 
     adc adc_fv(out, in, clk);
