@@ -1,0 +1,8 @@
+include ../../../Makefile.conf
+
+ROOT_DIR := $(BUILD_DIR)/../../..
+TARGET := event_triggered_ping_pong_ball.smv
+LOG_FILE := $(TARGET:.smv=.log)
+PROVE_ARGS += --reset=_rst --prop=1
+
+include ../../../Makefile.build
