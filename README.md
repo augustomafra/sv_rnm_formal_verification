@@ -1,4 +1,26 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19168740.svg)](https://doi.org/10.5281/zenodo.19168740)
+
+# Usage
+- Install forks of [Yosys](https://github.com/augustomafra/yosys/tree/real_number_formal_modeling) and [Pono](https://github.com/augustomafra/pono/tree/smv_fp_only).
+- Run `make` to automatically build and run all benchmarks.
+## Details
+- `make build`: only build benchmarks.
+- `make prove | all`: build and run all benchmarks. It is the default target.
+- `make backup`: save a `.log.bak` backup file for the current benchmark settings.
+- `make clean`: deletes built artifacts. Note: Does not remove `.log` files
+  generated from benchmark runs.
+- `make FP_SEMANTICS=1`: configure Pono to run with Floating-Point arithmetic
+  theory instead of real arithmetic theory.
+- `make TIMEOUT=10s`: specify timeout for each benchmark run. Default: `10s`.
+- `make ENGINE=ind`: specify which of Pono's engines is used. Default: `ind`.
+- `make SOLVER=cvc5`: specify which of Pono's SMT solvers is used. Default: `cvc5`.
+- `make VERBOSITY=1`: specify Pono's verbosity. Default: `0`.
+- `make BOUND=10`: specify Pono's maximum search bound. Default: `10`.
+- `make WITNESS=1`: configure Pono to generate a witness trace on `sat` results.
+- `make PROP=0`: solve the property of specified index. Used in benchmarks that
+  have more than one assertion. Default: `0`.
+-
+
 # References
 - Nathan Fulton, Stefan Mitsch, Jan-David Quesel, Marcus Völp, and André Platzer.
 KeYmaera X: An axiomatic tactical theorem prover for hybrid systems. In Amy P.
