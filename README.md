@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19168740.svg)](https://doi.org/10.5281/zenodo.19168740)
 # References
 - Nathan Fulton, Stefan Mitsch, Jan-David Quesel, Marcus Völp, and André Platzer.
 KeYmaera X: An axiomatic tactical theorem prover for hybrid systems. In Amy P.
