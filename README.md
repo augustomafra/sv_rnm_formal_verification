@@ -19,7 +19,6 @@
 - `make WITNESS=1`: configure Pono to generate a witness trace on `sat` results.
 - `make PROP=0`: solve the property of specified index. Used in benchmarks that
   have more than one assertion. Default: `0`.
--
 
 # References
 - Nathan Fulton, Stefan Mitsch, Jan-David Quesel, Marcus Völp, and André Platzer.
