@@ -1,33 +1,33 @@
 // Considering the RC circuit:
-//                
+//
 //                i
 //               -->
 //   + ._______/\/\/\/______  +
 //                R         |
 //   Vi                   C _  v
-//                          T 
+//                          T
 //   - .____________________| -
 //     |
 //     T GND
-// 
-// 
+//
+//
 // The equation of the voltage at the capacitor is:
-// 
+//
 //     RC(dv/dt) + v = Vi
 //     dv/dt = (Vi - v) / RC
-// 
+//
 // Solving the differential equation yields:
-// 
+//
 //     dv = dt(Vi - v) / RC
 //     dv / (v - Vi) = -dt / RC
 //     INT(dv / (v - Vi)) = INT(dt) / -RC
 //     ln((v - Vi)/(V0 - Vi)) = -t / RC
 //     (v - Vi) / (V0 - Vi) = e^(-t / RC)
 //     v - Vi = (V0 - Vi)e^(-t / RC)
-//     
+//
 // Therefore:
-// 
-//     v = Vi + (V0 - Vi)e^(-t / RC) 
+//
+//     v = Vi + (V0 - Vi)e^(-t / RC)
 
 module main
 #(
@@ -46,9 +46,9 @@ module main
     //
     //     (v' - v) / Tclk = (1/RC) * (Vi - v)
     //     f(v' - v) = (1/RC) * (Vi - v)
-    // 
+    //
     // Therefore:
-    // 
+    //
     //     v' = v + (1/fRC) * (Vi - v)
 
     real Vi;
@@ -74,5 +74,3 @@ module main
     //assert property (s_eventually (-f*R*C*epsilon <= v && v <= f*R*C*epsilon));
     assert property (past_rst || past_v - v > epsilon || (-f*R*C*epsilon <= v && v <= f*R*C*epsilon));
 endmodule
-
-//~/Documents/universidade/pono/build/pono --smt-solver cvc5 --witness --reset _rst --resetsteps 2 --engine bmc --bound 51 capacitor.smv
