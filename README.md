@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19169445.svg)](https://doi.org/10.5281/zenodo.19169445)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19645896.svg)](https://doi.org/10.5281/zenodo.19645896)
 
 # Usage
 - Install forks of [Yosys](https://github.com/augustomafra/yosys/tree/real_number_formal_modeling) and [Pono](https://github.com/augustomafra/pono/tree/smv_fp_only).
