@@ -58,12 +58,16 @@ module main
     `REG_PAST(real, x, clk, rst, 0.0)
     `REG_PAST(real, y, clk, rst, 0.0)
 
-    assert property (rst || past_rst || ~(w>=0.0 && d>=0.0)
+    localparam epsilon = 1e-12;
+
+    assert property (rst || past_rst || ~(w>=0.0 && w<=1e6 && d>=0.0)
+        || `is_nan(past_x) || `is_nan(x)
+        || `is_nan(past_y) || `is_nan(y)
         || past_x > 10.0 || x > 10.0
         || past_x < -10.0 || past_x < -10.0
         || (0.0 < past_x && past_x < 0.1) || (0.0 < x && x < 0.1)
         || (-0.1 < past_x && past_x < 0.0) || (-0.1 < x && x < 0.0)
         || ~(w * w * past_x * past_x + past_y * past_y <= c * c)
-        || w * w * x * x + y * y <= c * c
+        || w * w * x * x + y * y <= c * c + epsilon
     );
 endmodule

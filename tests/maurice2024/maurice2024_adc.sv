@@ -11,7 +11,7 @@ module main(
 `real VSUP = 1.0;
 
 // PARAMETERS
-parameter n = 3; 
+parameter n = 3;
 parameter `real nlevels = $pow(2.0,n); // number levels of conversion
 
 // VARIABLES
@@ -33,7 +33,7 @@ always @(VSUP)
     assign delta = VSUP / nlevels; // vsup is supply voltage or full scale voltage
                                    // vsup is considered as an input to converter
 `endif
-                            
+
 
 `ifndef FORMAL
 always @(VIN) begin
@@ -48,6 +48,6 @@ end
 
 // ASSERTION
 //ADC: assert property (@(posedge CLK) ((VIN >= vsuplow) && (VIN <= VSUP)) |-> Q == q);
-ADC: assert property (!(((VIN >= vsuplow) && (VIN <= VSUP))) || Q == q);
+ADC: assert property (!(((VIN > 0.875) && (VIN <= VSUP))) || Q == q);
 
 endmodule

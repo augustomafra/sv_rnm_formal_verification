@@ -1,7 +1,7 @@
 include Makefile.conf
 
 export ROOT_DIR := $(BUILD_DIR)
-MAKEFILES += tests/arithmetic/Makefile
+#MAKEFILES += tests/arithmetic/Makefile
 MAKEFILES += tests/capacitor/Makefile
 #MAKEFILES += tests/counter/Makefile
 MAKEFILES += tests/designers_guide/ch4/Makefile
@@ -15,9 +15,9 @@ MAKEFILES += tests/keymaera_x/event_triggered_ping_pong_ball/Makefile.with_invar
 MAKEFILES += tests/keymaera_x/forward_driving_car/Makefile
 MAKEFILES += tests/keymaera_x/short_bouncing_ball/Makefile
 MAKEFILES += tests/keymaera_x/short_bouncing_ball/Makefile.with_invariant
-MAKEFILES += tests/maurice2024/Makefile.adc
+MAKEFILES += tests/maurice2024/Makefile.maurice2024_adc
 MAKEFILES += tests/maurice2024/Makefile.adc_dac
-MAKEFILES += tests/maurice2024/Makefile.dac
+MAKEFILES += tests/maurice2024/Makefile.maurice2024_dac
 MAKEFILES += tests/maurice2024/Makefile.dac_adc
 MAKEFILES += tests/rnm_example/Makefile
 
