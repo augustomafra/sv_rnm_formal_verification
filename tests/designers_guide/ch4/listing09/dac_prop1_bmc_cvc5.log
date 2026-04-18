@@ -1,0 +1,90 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 dac.smv 2>&1 | tee -a dac_prop1_bmc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (<= _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= (- _past_past_out _past_out) (/ 1 256)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2
+  BMC check at bound 2 unsatisfiable
+
+BMC checking at bound: 3
+  BMC check at bound 3 unsatisfiable
+
+BMC checking at bound: 4
+  BMC check at bound 4 unsatisfiable
+
+BMC checking at bound: 5
+  BMC check at bound 5 unsatisfiable
+
+BMC checking at bound: 6
+  BMC check at bound 6 unsatisfiable
+
+BMC checking at bound: 7
+  BMC check at bound 7 unsatisfiable
+
+BMC checking at bound: 8
+  BMC check at bound 8 unsatisfiable
+
+BMC checking at bound: 9
+  BMC check at bound 9 unsatisfiable
+
+BMC checking at bound: 10
+  BMC check at bound 10 unsatisfiable
+
+BMC checking at bound: 11
+  BMC check at bound 11 unsatisfiable
+
+BMC checking at bound: 12
+  BMC check at bound 12 unsatisfiable
+
+BMC checking at bound: 13
+  BMC check at bound 13 unsatisfiable
+
+BMC checking at bound: 14
+  BMC check at bound 14 unsatisfiable
+
+BMC checking at bound: 15
+  BMC check at bound 15 unsatisfiable
+
+BMC checking at bound: 16
+  BMC check at bound 16 unsatisfiable
+
+BMC checking at bound: 17
+  BMC check at bound 17 unsatisfiable
+
+BMC checking at bound: 18
+  BMC check at bound 18 unsatisfiable
+
+BMC checking at bound: 19
+  BMC check at bound 19 unsatisfiable
+
+BMC checking at bound: 20
+  BMC check at bound 20 unsatisfiable
+
+BMC checking at bound: 21
+  BMC check at bound 21 unsatisfiable
+
+BMC checking at bound: 22
+  BMC check at bound 22 unsatisfiable
+
+BMC checking at bound: 23
+  BMC check at bound 23 unsatisfiable
+
+BMC checking at bound: 24
+  BMC check at bound 24 unsatisfiable
+
+BMC checking at bound: 25
+  BMC check at bound 25 unsatisfiable
+
+BMC checking at bound: 26
+  BMC check at bound 26 unsatisfiable
+
+BMC checking at bound: 27
+  BMC check at bound 27 unsatisfiable
+
+BMC checking at bound: 28

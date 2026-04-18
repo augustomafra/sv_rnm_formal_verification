@@ -1,0 +1,5 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=mbic3  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 dac.smv 2>&1 | tee -a dac_prop1_mbic3_msat.log
+Solving property: (= (ite (or (not (= (ite (<= _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (+ _past_out (* (to_real (- 1)) _past_past_out)) (- (/ 1 256))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

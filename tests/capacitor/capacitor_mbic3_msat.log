@@ -1,0 +1,5 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=mbic3  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst capacitor.smv 2>&1 | tee -a capacitor_mbic3_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= _past_rst (_ bv0 1))) (not (= (ite (not (<= (- (/ 1 1000000)) (+ _v (* (to_real (- 1)) _past_v)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (<= (- (/ 567 100000000)) _v) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _v (/ 567 100000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

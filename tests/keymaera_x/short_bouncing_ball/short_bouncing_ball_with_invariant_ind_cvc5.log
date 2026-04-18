@@ -1,0 +1,17 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ind  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_with_invariant_ind_cvc5.log
+Solving property: (let ((_let_1 (* 2.0 _g))) (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (< _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _past_x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (bvand (ite (= (* _let_1 _past_x) (- (* _let_1 _H) (* _v _v))) (_ bv1 1) (_ bv0 1)) (ite (>= _past_x 0.0) (_ bv1 1) (_ bv0 1)))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))
+Got input variables in property. Promoting them to states.
+
+k-induction current unrolling depth/bound: 0
+k-induction checking simple path (lazy) at bound: 0
+k-induction checking inductive step (property) at bound: 0
+k-induction checking base case at bound: 0
+
+k-induction current unrolling depth/bound: 1
+k-induction checking simple path (lazy) at bound: 1
+k-induction checking inductive step (initial states) at bound: 1
+k-induction checking inductive step (property) at bound: 1
+k-induction checking base case at bound: 1
+
+k-induction current unrolling depth/bound: 2
+k-induction checking simple path (lazy) at bound: 2

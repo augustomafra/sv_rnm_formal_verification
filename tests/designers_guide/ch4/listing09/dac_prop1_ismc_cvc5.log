@@ -1,0 +1,15 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ismc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 dac.smv 2>&1 | tee -a dac_prop1_ismc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (<= _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= (- _past_past_out _past_out) (/ 1 256)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Running ISMC at bound: 2
+Running ISMC at bound: 3
+Running ISMC at bound: 4
+ISMC failed due to: Subexpressions must have the same type:
+Equation: (= |__dac_fv#result_@2| 0)
+Type 1: Real
+Type 2: Int
+
+Property 1 is UNKNOWN
+unknown
+Pono wall clock time (s): 89.4395

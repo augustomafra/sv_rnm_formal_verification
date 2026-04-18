@@ -1,0 +1,26 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_bmc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (fp.lt _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (fp.geq _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (fp.lt _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (fp.geq _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2
+  BMC check at bound 2 unsatisfiable
+
+BMC checking at bound: 3
+  BMC check at bound 3 unsatisfiable
+
+BMC checking at bound: 4
+  BMC check at bound 4 unsatisfiable
+
+BMC checking at bound: 5
+  BMC check at bound 5 unsatisfiable
+
+BMC checking at bound: 6

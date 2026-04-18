@@ -1,0 +1,6 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=mbic3  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst dac_adc_formal.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/../../..//util/fp2real.sh | tee -a dac_adc_formal_fp_mbic3_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct _past_rst #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_past_adc_in |_idac#result|) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq (fp.sub RNE _past_past_adc_in |_idac#result|) (fp #b0 #b01111110111 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 1 256))) ) #b1 #b0) #b0)) #b1 #b0) #b1))
+Got input variables in property. Promoting them to states.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

@@ -1,0 +1,16 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst capacitor.smv 2>&1 | tee -a capacitor_ic3ia_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _past_rst (_ bv0 1)) (distinct (ite (> (- _past_v _v) (/ 1 1000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (<= (/ (- 567) 100000000) _v) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _v (/ 567 100000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Generating implicit predicate abstraction.
+Number predicates found in init: 1
+Number predicates found in prop: 9
+Total number of initial predicates: 10
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3
+Propagation phase at frame 3
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0548866

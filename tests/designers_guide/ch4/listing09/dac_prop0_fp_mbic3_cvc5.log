@@ -1,0 +1,6 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=mbic3  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=0 dac.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing09/../../../..//util/fp2real.sh | tee -a dac_prop0_fp_mbic3_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (and (distinct (ite (fp.geq _past_out (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _past_out (fp (_ bv0 1) (_ bv1022 11) (_ bv4468415255281664 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (and (distinct (ite (fp.geq _past_out (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real (/ 255 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _past_out (fp (_ bv0 1) (_ bv1022 11) (_ bv4468415255281664 52)) ((as_real (/ 255 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

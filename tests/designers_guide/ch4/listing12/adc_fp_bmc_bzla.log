@@ -1,0 +1,31 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=bmc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst adc.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing12/../../../..//util/fp2real.sh | tee -a adc_fp_bmc_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct _past_rst #b0)) #b1 #b0) #b0) (distinct _past_past_rst #b0)) #b1 #b0) #b0) (distinct (ite (distinct |_adc_fv#out| _past_out) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_in _past_past_in) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq (fp.sub RNE _past_in _past_past_in) (fp #b0 #b01111110111 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 1 256))) ) #b1 #b0) #b0)) #b1 #b0) #b1))
+Got input variables in property. Promoting them to states.
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2
+  BMC check at bound 2 unsatisfiable
+
+BMC checking at bound: 3
+  BMC check at bound 3 unsatisfiable
+
+BMC checking at bound: 4
+  BMC check at bound 4 unsatisfiable
+
+BMC checking at bound: 5
+  BMC check at bound 5 unsatisfiable
+
+BMC checking at bound: 6
+  BMC check at bound 6 unsatisfiable
+
+BMC checking at bound: 7
+  BMC check at bound 7 unsatisfiable
+
+BMC checking at bound: 8

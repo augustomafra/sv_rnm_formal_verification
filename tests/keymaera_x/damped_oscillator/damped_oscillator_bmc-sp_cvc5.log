@@ -1,0 +1,15 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc-sp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst damped_oscillator.smv 2>&1 | tee -a damped_oscillator_bmc-sp_cvc5.log
+Solving property: (let ((_let_1 (* _c _c))) (let ((_let_2 (* _w _w))) (let ((_let_3 (distinct (ite (and (distinct (ite (< 0.0 _x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _x (/ 10000000000000001 100000000000000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (let ((_let_4 (distinct (ite (< _past_x (- 10.0)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (let ((_let_5 (distinct (ite (and (distinct (ite (< 0.0 _past_x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct _past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (ite (and (distinct (ite (>= _w 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= _d 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (> _past_x 10.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (> _x 10.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_5) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_3) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_5) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_3) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (ite (<= (+ (* (* _let_2 _past_x) _past_x) (* _past_y _past_y)) _let_1) (_ bv1 1) (_ bv0 1))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= (+ (* (* _let_2 _x) _x) (* _y _y)) _let_1) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))))))
+Got input variables in property. Promoting them to states.
+
+BMC-SP current unrolling depth/bound: 0
+BMC-SP checking simple path (lazy) at bound: 0
+BMC-SP checking base case at bound: 0
+
+BMC-SP current unrolling depth/bound: 1
+BMC-SP checking simple path (lazy) at bound: 1
+BMC-SP checking inductive step (initial states) at bound: 1
+BMC-SP checking base case at bound: 1
+
+BMC-SP current unrolling depth/bound: 2
+BMC-SP checking simple path (lazy) at bound: 2

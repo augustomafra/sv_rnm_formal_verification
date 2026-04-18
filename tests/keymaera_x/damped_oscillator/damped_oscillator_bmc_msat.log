@@ -1,0 +1,13 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=bmc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst damped_oscillator.smv 2>&1 | tee -a damped_oscillator_bmc_msat.log
+Solving property: (let ((.def_84 (not (= (ite (not (<= (to_real (- 10)) _past_x)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))))) (let ((.def_129 (not (= (ite (and (not (= (ite (not (<= _past_x (to_real 0))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) .def_84) (_ bv1 1) (_ bv0 1)) (_ bv0 1))))) (let ((.def_135 (not (= (ite (and (not (= (ite (not (<= _x (to_real 0))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not (<= (/ 10000000000000001 100000000000000000) _x)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))))) (= (ite (or (not (= (ite (or (not (= (ite (or .def_135 (not (= (ite (or .def_129 (not (= (ite (or (not (= (ite (or (not (= (ite (or .def_84 (not (= (ite (or .def_84 (not (= (ite (or (not (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= _past_rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (<= (to_real 0) _w) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (to_real 0) _d) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not (<= _past_x (to_real 10))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not (<= _x (to_real 10))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) .def_129) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) .def_135) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (+ (* _past_x (* _past_x (* _w _w))) (+ (* _past_y _past_y) (* (to_real (- 1)) (* _c _c)))) (to_real 0)) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (to_real 0) (+ (* _c _c) (+ (* (to_real (- 1)) (* _x (* _x (* _w _w)))) (* (to_real (- 1)) (* _y _y))))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))))
+Got input variables in property. Promoting them to states.
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2

@@ -1,0 +1,9 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=mbic3  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst flop_rnm.smv 2>&1 | tee -a flop_rnm_mbic3_msat.log
+Solving property: (let ((.def_26 (<= (to_real 0) _past_q))) (= (ite (or (not (= (ite (not (= (ite (or (not (= (ite (= (ite (not (<= _past_incr (to_real 0))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (= (ite (not .def_26) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= (ite .def_26 (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _past_q _q) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0126274

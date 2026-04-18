@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=mbic3  --verbosity=1 --bound=999 --verbosity=1 --bound=999 rnm.smv 2>&1 | tee -a rnm_mbic3_msat.log
+Solving property: (let ((.def_23 (not (= _i_Sprg (_ bv1 1))))) (let ((.def_26 (not (= _i_Ssmpl (_ bv1 1))))) (let ((.def_31 (concat _i_Sprg _i_Ssmpl))) (let ((.def_52 (ite (= (ite (= .def_31 (_ bv3 2)) (_ bv1 1) (_ bv0 1)) (_ bv1 1)) (* (/ 1 2) (+ _Vref_L _i_Vin)) (ite (= (ite (= .def_31 (_ bv2 2)) (_ bv1 1) (_ bv0 1)) (_ bv1 1)) _Vref_L (ite (= (ite (= .def_31 (_ bv1 2)) (_ bv1 1) (_ bv0 1)) (_ bv1 1)) _i_Vin (ite (= (ite (= .def_31 (_ bv0 2)) (_ bv1 1) (_ bv0 1)) (_ bv1 1)) _Vdac_mat (to_real 0))))))) (let ((.def_62 (not (= _i_Ssmpl (_ bv0 1))))) (let ((.def_82 (not (= _i_Sprg (_ bv0 1))))) (= (ite (and (not (= (ite (and (not (= (ite (and (not (= (ite (or (not (= (ite (= (ite (and .def_23 .def_26) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= _Vdac_mat .def_52) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (or (not (= (ite (= (ite (and .def_23 .def_62) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= _i_Vin .def_52) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (or (not (= (ite (= (ite (and .def_26 .def_82) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= _Vref_L .def_52) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (or (not (= (ite (= (ite (and .def_62 .def_82) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= (+ _Vref_L (+ _i_Vin (* (to_real (- 2)) .def_52))) (to_real 0)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))))))
+Got input variables in property. Promoting them to states.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0125218

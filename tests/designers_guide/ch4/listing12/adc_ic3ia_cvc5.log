@@ -1,0 +1,23 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst adc.smv 2>&1 | tee -a adc_ic3ia_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct _past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct _past_past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (distinct |_adc_fv#out| _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _past_in _past_past_in) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= (- _past_in _past_past_in) (/ 1 256)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 3
+Number predicates found in prop: 10
+Total number of initial predicates: 13
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3
+4 new predicates added by refinement
+Blocking phase at frame 3
+Subexpressions must have the same type:
+Equation: (= _past_in@1 0)
+Type 1: Real
+Type 2: Int
+
+error
+b0
+Pono wall clock time (s): 0.375309

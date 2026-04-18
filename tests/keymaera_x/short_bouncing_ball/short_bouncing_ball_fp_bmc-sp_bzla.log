@@ -1,0 +1,53 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=bmc-sp  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_bmc-sp_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Got input variables in property. Promoting them to states.
+
+BMC-SP current unrolling depth/bound: 0
+BMC-SP checking simple path (lazy) at bound: 0
+BMC-SP checking base case at bound: 0
+
+BMC-SP current unrolling depth/bound: 1
+BMC-SP checking simple path (lazy) at bound: 1
+BMC-SP checking inductive step (initial states) at bound: 1
+BMC-SP checking base case at bound: 1
+
+BMC-SP current unrolling depth/bound: 2
+BMC-SP checking simple path (lazy) at bound: 2
+BMC-SP checking inductive step (initial states) at bound: 2
+BMC-SP checking base case at bound: 2
+
+BMC-SP current unrolling depth/bound: 3
+BMC-SP checking simple path (lazy) at bound: 3
+BMC-SP checking inductive step (initial states) at bound: 3
+BMC-SP checking base case at bound: 3
+
+BMC-SP current unrolling depth/bound: 4
+BMC-SP checking simple path (lazy) at bound: 4
+BMC-SP checking inductive step (initial states) at bound: 4
+BMC-SP checking base case at bound: 4
+
+BMC-SP current unrolling depth/bound: 5
+BMC-SP checking simple path (lazy) at bound: 5
+BMC-SP checking inductive step (initial states) at bound: 5
+BMC-SP checking base case at bound: 5
+
+BMC-SP current unrolling depth/bound: 6
+BMC-SP checking simple path (lazy) at bound: 6
+BMC-SP checking inductive step (initial states) at bound: 6
+BMC-SP checking base case at bound: 6
+
+BMC-SP current unrolling depth/bound: 7
+BMC-SP checking simple path (lazy) at bound: 7
+BMC-SP checking inductive step (initial states) at bound: 7
+BMC-SP checking base case at bound: 7
+
+BMC-SP current unrolling depth/bound: 8
+BMC-SP checking simple path (lazy) at bound: 8
+BMC-SP checking inductive step (initial states) at bound: 8
+BMC-SP checking base case at bound: 8
+
+BMC-SP current unrolling depth/bound: 9
+BMC-SP checking simple path (lazy) at bound: 9
+BMC-SP checking inductive step (initial states) at bound: 9
+BMC-SP checking base case at bound: 9

@@ -1,0 +1,37 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ind  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_ind_msat.log
+Solving property: (let ((.def_89 (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ))) (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite .def_89 (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (and (not (fp.isNaN _x)) (not .def_89)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+
+k-induction current unrolling depth/bound: 0
+k-induction checking simple path (lazy) at bound: 0
+k-induction checking inductive step (property) at bound: 0
+k-induction checking base case at bound: 0
+
+k-induction current unrolling depth/bound: 1
+k-induction checking simple path (lazy) at bound: 1
+k-induction checking inductive step (initial states) at bound: 1
+k-induction checking inductive step (property) at bound: 1
+k-induction checking base case at bound: 1
+
+k-induction current unrolling depth/bound: 2
+k-induction checking simple path (lazy) at bound: 2
+k-induction checking inductive step (initial states) at bound: 2
+k-induction checking inductive step (property) at bound: 2
+k-induction checking base case at bound: 2
+
+k-induction current unrolling depth/bound: 3
+k-induction checking simple path (lazy) at bound: 3
+k-induction checking inductive step (initial states) at bound: 3
+k-induction checking inductive step (property) at bound: 3
+k-induction checking base case at bound: 3
+
+k-induction current unrolling depth/bound: 4
+k-induction checking simple path (lazy) at bound: 4
+k-induction checking inductive step (initial states) at bound: 4
+k-induction checking inductive step (property) at bound: 4
+k-induction checking base case at bound: 4
+
+k-induction current unrolling depth/bound: 5
+k-induction checking simple path (lazy) at bound: 5
+k-induction checking inductive step (initial states) at bound: 5
+k-induction checking inductive step (property) at bound: 5

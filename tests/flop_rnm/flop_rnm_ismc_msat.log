@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ismc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst flop_rnm.smv 2>&1 | tee -a flop_rnm_ismc_msat.log
+Solving property: (let ((.def_26 (<= (to_real 0) _past_q))) (= (ite (or (not (= (ite (not (= (ite (or (not (= (ite (= (ite (not (<= _past_incr (to_real 0))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (= (ite (not .def_26) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= (ite .def_26 (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _past_q _q) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Running ISMC at bound: 2
+Running ISMC at bound: 3
+Found a proof at bound: 3
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0302794

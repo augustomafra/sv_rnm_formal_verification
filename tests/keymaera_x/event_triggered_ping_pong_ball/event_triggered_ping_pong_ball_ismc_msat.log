@@ -1,0 +1,15 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ismc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 event_triggered_ping_pong_ball.smv 2>&1 | tee -a event_triggered_ping_pong_ball_ismc_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= _valid (_ bv1 1))) (not (= _rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (<= (to_real 0) _x) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x (to_real 5)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Running ISMC at bound: 2
+Running ISMC at bound: 3
+Running ISMC at bound: 4
+Running ISMC at bound: 5
+Running ISMC at bound: 6
+Running ISMC at bound: 7
+Found a proof at bound: 7
+Property 1 is TRUE
+unsat
+Pono wall clock time (s): 0.235932

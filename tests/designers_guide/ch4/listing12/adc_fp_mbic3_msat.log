@@ -1,0 +1,8 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=mbic3  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst adc.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing12/../../../..//util/fp2real.sh | tee -a adc_fp_mbic3_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= _past_rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= _past_past_rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not (= |_adc_fv#out| _past_out)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.lt _past_in _past_past_in) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq (fp.sub RNE _past_in _past_past_in) (fp #b0 #b01111110111 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 1 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3

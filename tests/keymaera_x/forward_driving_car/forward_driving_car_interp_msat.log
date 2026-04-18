@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst forward_driving_car.smv 2>&1 | tee -a forward_driving_car_interp_msat.log
+Solving property: (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite (<= (to_real 0) _v) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Found a proof at bound: 1
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0229879

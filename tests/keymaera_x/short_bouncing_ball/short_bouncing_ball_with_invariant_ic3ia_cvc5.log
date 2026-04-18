@@ -1,0 +1,13 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_with_invariant_ic3ia_cvc5.log
+Solving property: (let ((_let_1 (* 2.0 _g))) (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (< _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _past_x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (bvand (ite (= (* _let_1 _past_x) (- (* _let_1 _H) (* _v _v))) (_ bv1 1) (_ bv0 1)) (ite (>= _past_x 0.0) (_ bv1 1) (_ bv0 1)))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 3
+Number predicates found in prop: 10
+Total number of initial predicates: 13
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+1 new predicates added by refinement
+Blocking phase at frame 2

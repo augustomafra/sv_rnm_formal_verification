@@ -1,0 +1,15 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 dac.smv 2>&1 | tee -a dac_prop1_interp_msat.log
+Solving property: (= (ite (or (not (= (ite (<= _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (+ _past_out (* (to_real (- 1)) _past_past_out)) (- (/ 1 256))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Extending reached states (count: 1)
+Checking interpolation at bound: 3
+Extending reached states (count: 1)
+Extending reached states (count: 2)
+Extending reached states (count: 3)
+Found a proof at bound: 3
+Property 1 is TRUE
+unsat
+Pono wall clock time (s): 67.8341

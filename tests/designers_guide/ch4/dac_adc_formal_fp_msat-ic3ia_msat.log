@@ -1,0 +1,7 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=msat-ic3ia  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst dac_adc_formal.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/../../..//util/fp2real.sh | tee -a dac_adc_formal_fp_msat-ic3ia_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= _past_rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.lt _past_past_adc_in |_idac#result|) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq (fp.sub RNE _past_past_adc_in |_idac#result|) (fp #b0 #b01111110111 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 1 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Running open-source ic3ia as backend.
+initialized IC3: 7 state vars, 2 input vars, 3 predicates
+1: 1 {3|0}
+timeout: the monitored command dumped core

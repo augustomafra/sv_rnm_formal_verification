@@ -1,0 +1,23 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 event_triggered_ping_pong_ball.smv 2>&1 | tee -a event_triggered_ping_pong_ball_with_invariant_ic3ia_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (bvnot _valid) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (and (distinct (ite (>= 5.0 _past_x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= _past_x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (or (distinct (ite (distinct _past_x 5.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _past_v 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x 5.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 3
+Number predicates found in prop: 12
+Total number of initial predicates: 15
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+4 new predicates added by refinement
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3
+Propagation phase at frame 3
+Blocking phase at frame 4
+Propagation phase at frame 4
+Blocking phase at frame 5
+Propagation phase at frame 5
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.504839

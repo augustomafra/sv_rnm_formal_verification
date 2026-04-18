@@ -1,0 +1,12 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_interp_msat.log
+Solving property: (let ((.def_77 (<= (to_real 0) _x))) (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite (not .def_77) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite .def_77 (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Extending reached states (count: 1)
+Checking interpolation at bound: 3
+Extending reached states (count: 1)
+Checking interpolation at bound: 4
+Extending reached states (count: 1)

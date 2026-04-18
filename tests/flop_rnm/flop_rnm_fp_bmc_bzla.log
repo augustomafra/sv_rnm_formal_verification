@@ -1,0 +1,30 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=bmc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst flop_rnm.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/flop_rnm/../../util/fp2real.sh | tee -a flop_rnm_fp_bmc_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (= (ite (fp.gt _past_incr (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (= (ite (fp.lt _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (= (ite (fp.geq _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (= (fp.add RNE _past_q (fp #b0 #b01111111111 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) _past_q) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq _past_q _q) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (= (ite (fp.gt _past_incr (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (= (ite (fp.lt _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (= (ite (fp.geq _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (= (fp.add RNE _past_q (fp #b0 #b01111111111 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) _past_q) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq _past_q _q) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (= (ite (fp.gt _past_incr (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (= (ite (fp.lt _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (= (ite (fp.geq _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (= (fp.add RNE _past_q (fp #b0 #b01111111111 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) _past_q) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq _past_q _q) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (= (ite (fp.gt _past_incr (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 1.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (= (ite (fp.lt _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 1.0)) ) #b1 #b0) #b0) #b1 #b0) #b0) (distinct (ite (= (ite (fp.geq _past_q (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 1.0)) ) #b1 #b0) #b0) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (= (fp.add RNE _past_q (fp #b0 #b01111111111 #b0000000000000000000000000000000000000000000000000000) ((as_real 1.0)) ) _past_q) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.leq _past_q _q) #b1 #b0) #b0)) #b1 #b0) #b1))
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2
+  BMC check at bound 2 unsatisfiable
+
+BMC checking at bound: 3
+  BMC check at bound 3 unsatisfiable
+
+BMC checking at bound: 4
+  BMC check at bound 4 unsatisfiable
+
+BMC checking at bound: 5
+  BMC check at bound 5 unsatisfiable
+
+BMC checking at bound: 6
+  BMC check at bound 6 unsatisfiable
+
+BMC checking at bound: 7

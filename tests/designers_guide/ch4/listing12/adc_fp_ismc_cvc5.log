@@ -1,0 +1,9 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ismc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst adc.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing12/../../../..//util/fp2real.sh | tee -a adc_fp_ismc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct _past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct _past_past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (distinct |_adc_fv#out| _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.lt _past_in _past_past_in) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq (fp.sub roundNearestTiesToEven _past_in _past_past_in) (fp (_ bv0 1) (_ bv1015 11) (_ bv0 52)) ((as_real (/ 1 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Interpolation failed due to: Interpolation failure.
+error
+b0
+Pono wall clock time (s): 0.025142

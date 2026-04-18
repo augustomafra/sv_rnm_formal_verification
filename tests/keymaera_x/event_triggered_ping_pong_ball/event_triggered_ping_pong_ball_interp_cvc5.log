@@ -1,0 +1,11 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 event_triggered_ping_pong_ball.smv 2>&1 | tee -a event_triggered_ping_pong_ball_interp_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (bvnot _valid) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x 5.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Failed when computing interpolant.
+Property 1 is UNKNOWN
+unknown
+Pono wall clock time (s): 0.0305553

@@ -1,0 +1,15 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst forward_driving_car.smv 2>&1 | tee -a forward_driving_car_ic3ia_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (>= _v 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 3
+Number predicates found in prop: 6
+Total number of initial predicates: 9
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Propagation phase at frame 2
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.035527

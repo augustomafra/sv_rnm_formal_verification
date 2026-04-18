@@ -1,0 +1,8 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ismc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 dac.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing09/../../../..//util/fp2real.sh | tee -a dac_prop1_fp_ismc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (fp.leq _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.geq (fp.sub roundNearestTiesToEven _past_past_out _past_out) (fp (_ bv0 1) (_ bv1015 11) (_ bv0 52)) ((as_real (/ 1 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Interpolation failed due to: Interpolation failure.
+error
+b1
+Pono wall clock time (s): 0.0240118

@@ -1,0 +1,16 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ic3ia  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_ic3ia_msat.log
+Solving property: (let ((.def_89 (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ))) (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite .def_89 (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (and (not (fp.isNaN _x)) (not .def_89)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 2
+Number predicates found in prop: 4
+Total number of initial predicates: 6
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+IC3IA: refinement failed couldn't find any new predicates
+IC3Base: refinement failure, returning unknown
+Property 1 is UNKNOWN
+unknown
+Pono wall clock time (s): 1.55765

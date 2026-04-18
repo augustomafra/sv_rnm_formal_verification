@@ -1,0 +1,11 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_with_invariant_ic3ia_msat.log
+Solving property: (let ((.def_77 (<= (to_real 0) _x))) (let ((.def_86 (<= (to_real 0) _past_x))) (= (ite (or (not (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite (not .def_77) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not .def_86) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (bvand (ite (= (+ (* _past_x (* (to_real 2) _g)) (+ (* (to_real (- 1)) (* _H (* (to_real 2) _g))) (* _v _v))) (to_real 0)) (_ bv1 1) (_ bv0 1)) (ite .def_86 (_ bv1 1) (_ bv0 1))) (_ bv1 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite .def_77 (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 2
+Number predicates found in prop: 5
+Total number of initial predicates: 7
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

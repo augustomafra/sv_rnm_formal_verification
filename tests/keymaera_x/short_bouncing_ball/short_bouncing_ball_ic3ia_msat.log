@@ -1,0 +1,130 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_ic3ia_msat.log
+Solving property: (let ((.def_77 (<= (to_real 0) _x))) (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite (not .def_77) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite .def_77 (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 2
+Number predicates found in prop: 3
+Total number of initial predicates: 5
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+1 new predicates added by refinement
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3
+3 new predicates added by refinement
+Blocking phase at frame 3
+1 new predicates added by refinement
+Blocking phase at frame 3
+Propagation phase at frame 3
+Blocking phase at frame 4
+Propagation phase at frame 4
+Blocking phase at frame 5
+3 new predicates added by refinement
+Blocking phase at frame 5
+1 new predicates added by refinement
+Blocking phase at frame 5
+1 new predicates added by refinement
+Blocking phase at frame 5
+7 new predicates added by refinement
+Blocking phase at frame 5
+1 new predicates added by refinement
+Blocking phase at frame 5
+Propagation phase at frame 5
+Blocking phase at frame 6
+4 new predicates added by refinement
+Blocking phase at frame 6
+1 new predicates added by refinement
+Blocking phase at frame 6
+Propagation phase at frame 6
+Blocking phase at frame 7
+1 new predicates added by refinement
+Blocking phase at frame 7
+Propagation phase at frame 7
+Blocking phase at frame 8
+2 new predicates added by refinement
+Blocking phase at frame 8
+1 new predicates added by refinement
+Blocking phase at frame 8
+Propagation phase at frame 8
+Blocking phase at frame 9
+1 new predicates added by refinement
+Blocking phase at frame 9
+4 new predicates added by refinement
+Blocking phase at frame 9
+Propagation phase at frame 9
+Blocking phase at frame 10
+1 new predicates added by refinement
+Blocking phase at frame 10
+1 new predicates added by refinement
+Blocking phase at frame 10
+1 new predicates added by refinement
+Blocking phase at frame 10
+Propagation phase at frame 10
+Blocking phase at frame 11
+4 new predicates added by refinement
+Blocking phase at frame 11
+3 new predicates added by refinement
+Blocking phase at frame 11
+4 new predicates added by refinement
+Blocking phase at frame 11
+1 new predicates added by refinement
+Blocking phase at frame 11
+Propagation phase at frame 11
+Blocking phase at frame 12
+1 new predicates added by refinement
+Blocking phase at frame 12
+1 new predicates added by refinement
+Blocking phase at frame 12
+Propagation phase at frame 12
+Blocking phase at frame 13
+2 new predicates added by refinement
+Blocking phase at frame 13
+Propagation phase at frame 13
+Blocking phase at frame 14
+3 new predicates added by refinement
+Blocking phase at frame 14
+5 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+3 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+2 new predicates added by refinement
+Blocking phase at frame 14
+3 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+2 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+3 new predicates added by refinement
+Blocking phase at frame 14
+1 new predicates added by refinement
+Blocking phase at frame 14
+Propagation phase at frame 14
+Blocking phase at frame 15
+2 new predicates added by refinement
+Blocking phase at frame 15
+1 new predicates added by refinement
+Blocking phase at frame 15
+1 new predicates added by refinement
+Blocking phase at frame 15
+1 new predicates added by refinement
+Blocking phase at frame 15
+Propagation phase at frame 15

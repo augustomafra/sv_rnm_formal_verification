@@ -1,0 +1,5 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=mbic3  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst capacitor.smv 2>&1 | tee -a capacitor_mbic3_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _past_rst (_ bv0 1)) (distinct (ite (> (- _past_v _v) (/ 1 1000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (<= (/ (- 567) 100000000) _v) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _v (/ 567 100000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2

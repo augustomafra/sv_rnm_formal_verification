@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 dac.smv 2>&1 | tee -a dac_prop0_interp_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (and (distinct (ite (>= _past_out 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _past_out (/ 255 256)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Failed when computing interpolant.
+Property 0 is UNKNOWN
+unknown
+Pono wall clock time (s): 0.0881935

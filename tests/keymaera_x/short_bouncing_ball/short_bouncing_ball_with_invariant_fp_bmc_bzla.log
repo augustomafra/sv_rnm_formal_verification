@@ -1,0 +1,35 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=bmc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=0 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_with_invariant_fp_bmc_bzla.log
+Solving property: (let ((_let0 (fp.mul RNE (fp #b0 #b10000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 2.0))  _g))) (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 2.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 2.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (bvnot (bvand (ite (= (fp.mul RNE _let0 _past_x) (fp.sub RNE (fp.mul RNE _let0 _H) (fp.mul RNE _v _v))) #b1 #b0) (ite (fp.geq _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 2.0)) ) #b1 #b0))) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 2.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1)))
+Solving property: (let ((_let0 (fp.mul RNE (fp #b0 #b10000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0))  _g))) (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (bvnot (bvand (ite (= (fp.mul RNE _let0 _past_x) (fp.sub RNE (fp.mul RNE _let0 _H) (fp.mul RNE _v _v))) #b1 #b0) (ite (fp.geq _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0))) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1)))
+Solving property: (let ((_let0 (fp.mul RNE (fp #b0 #b10000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0))  _g))) (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (bvnot (bvand (ite (= (fp.mul RNE _let0 _past_x) (fp.sub RNE (fp.mul RNE _let0 _H) (fp.mul RNE _v _v))) #b1 #b0) (ite (fp.geq _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0))) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1)))
+Solving property: (let ((_let0 (fp.mul RNE (fp #b0 #b10000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0))  _g))) (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (bvnot (bvand (ite (= (fp.mul RNE _let0 _past_x) (fp.sub RNE (fp.mul RNE _let0 _H) (fp.mul RNE _v _v))) #b1 #b0) (ite (fp.geq _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0))) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1)))
+Solving property: (let ((_let0 (fp.mul RNE (fp #b0 #b10000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0))  _g))) (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (fp.lt _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (bvnot (bvand (ite (= (fp.mul RNE _let0 _past_x) (fp.sub RNE (fp.mul RNE _let0 _H) (fp.mul RNE _v _v))) #b1 #b0) (ite (fp.geq _past_x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0))) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1)))
+Got input variables in property. Promoting them to states.
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2
+  BMC check at bound 2 unsatisfiable
+
+BMC checking at bound: 3
+  BMC check at bound 3 unsatisfiable
+
+BMC checking at bound: 4
+  BMC check at bound 4 unsatisfiable
+
+BMC checking at bound: 5
+  BMC check at bound 5 unsatisfiable
+
+BMC checking at bound: 6
+  BMC check at bound 6 unsatisfiable
+
+BMC checking at bound: 7
+  BMC check at bound 7 unsatisfiable
+
+BMC checking at bound: 8

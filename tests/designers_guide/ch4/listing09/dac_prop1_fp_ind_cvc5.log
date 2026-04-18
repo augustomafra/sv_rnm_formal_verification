@@ -1,0 +1,24 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ind  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 dac.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing09/../../../..//util/fp2real.sh | tee -a dac_prop1_fp_ind_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (fp.leq _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.geq (fp.sub roundNearestTiesToEven _past_past_out _past_out) (fp (_ bv0 1) (_ bv1015 11) (_ bv0 52)) ((as_real (/ 1 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+
+k-induction current unrolling depth/bound: 0
+k-induction checking simple path (lazy) at bound: 0
+k-induction checking inductive step (property) at bound: 0
+k-induction checking base case at bound: 0
+
+k-induction current unrolling depth/bound: 1
+k-induction checking simple path (lazy) at bound: 1
+k-induction checking inductive step (initial states) at bound: 1
+k-induction checking inductive step (property) at bound: 1
+k-induction checking base case at bound: 1
+
+k-induction current unrolling depth/bound: 2
+k-induction checking simple path (lazy) at bound: 2
+k-induction checking inductive step (initial states) at bound: 2
+k-induction checking inductive step (property) at bound: 2
+k-induction checking base case at bound: 2
+
+k-induction current unrolling depth/bound: 3
+k-induction checking simple path (lazy) at bound: 3
+k-induction checking inductive step (initial states) at bound: 3
+k-induction checking inductive step (property) at bound: 3

@@ -1,0 +1,13 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst damped_oscillator.smv 2>&1 | tee -a damped_oscillator_bmc_cvc5.log
+Solving property: (let ((_let_1 (* _c _c))) (let ((_let_2 (* _w _w))) (let ((_let_3 (distinct (ite (and (distinct (ite (< 0.0 _x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _x (/ 10000000000000001 100000000000000000)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (let ((_let_4 (distinct (ite (< _past_x (- 10.0)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (let ((_let_5 (distinct (ite (and (distinct (ite (< 0.0 _past_x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct _past_rst (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (ite (and (distinct (ite (>= _w 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= _d 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (> _past_x 10.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (> _x 10.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_4) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_5) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_3) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_5) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) _let_3) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (ite (<= (+ (* (* _let_2 _past_x) _past_x) (* _past_y _past_y)) _let_1) (_ bv1 1) (_ bv0 1))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= (+ (* (* _let_2 _x) _x) (* _y _y)) _let_1) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))))))
+Got input variables in property. Promoting them to states.
+BMC bound_start_: 0 
+BMC bound_step_: 1 
+
+BMC checking at bound: 0
+  BMC check at bound 0 unsatisfiable
+
+BMC checking at bound: 1
+  BMC check at bound 1 unsatisfiable
+
+BMC checking at bound: 2

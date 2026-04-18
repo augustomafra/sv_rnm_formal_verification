@@ -1,0 +1,245 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc-sp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst forward_driving_car.smv 2>&1 | tee -a forward_driving_car_bmc-sp_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (>= _v 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+
+BMC-SP current unrolling depth/bound: 0
+BMC-SP checking simple path (lazy) at bound: 0
+BMC-SP checking base case at bound: 0
+
+BMC-SP current unrolling depth/bound: 1
+BMC-SP checking simple path (lazy) at bound: 1
+BMC-SP checking inductive step (initial states) at bound: 1
+BMC-SP checking base case at bound: 1
+
+BMC-SP current unrolling depth/bound: 2
+BMC-SP checking simple path (lazy) at bound: 2
+BMC-SP checking inductive step (initial states) at bound: 2
+BMC-SP checking base case at bound: 2
+
+BMC-SP current unrolling depth/bound: 3
+BMC-SP checking simple path (lazy) at bound: 3
+BMC-SP checking inductive step (initial states) at bound: 3
+BMC-SP checking base case at bound: 3
+
+BMC-SP current unrolling depth/bound: 4
+BMC-SP checking simple path (lazy) at bound: 4
+BMC-SP checking inductive step (initial states) at bound: 4
+BMC-SP checking base case at bound: 4
+
+BMC-SP current unrolling depth/bound: 5
+BMC-SP checking simple path (lazy) at bound: 5
+BMC-SP checking inductive step (initial states) at bound: 5
+BMC-SP checking base case at bound: 5
+
+BMC-SP current unrolling depth/bound: 6
+BMC-SP checking simple path (lazy) at bound: 6
+BMC-SP checking inductive step (initial states) at bound: 6
+BMC-SP checking base case at bound: 6
+
+BMC-SP current unrolling depth/bound: 7
+BMC-SP checking simple path (lazy) at bound: 7
+BMC-SP checking inductive step (initial states) at bound: 7
+BMC-SP checking base case at bound: 7
+
+BMC-SP current unrolling depth/bound: 8
+BMC-SP checking simple path (lazy) at bound: 8
+BMC-SP checking inductive step (initial states) at bound: 8
+BMC-SP checking base case at bound: 8
+
+BMC-SP current unrolling depth/bound: 9
+BMC-SP checking simple path (lazy) at bound: 9
+BMC-SP checking inductive step (initial states) at bound: 9
+BMC-SP checking base case at bound: 9
+
+BMC-SP current unrolling depth/bound: 10
+BMC-SP checking simple path (lazy) at bound: 10
+BMC-SP checking inductive step (initial states) at bound: 10
+BMC-SP checking base case at bound: 10
+
+BMC-SP current unrolling depth/bound: 11
+BMC-SP checking simple path (lazy) at bound: 11
+BMC-SP checking inductive step (initial states) at bound: 11
+BMC-SP checking base case at bound: 11
+
+BMC-SP current unrolling depth/bound: 12
+BMC-SP checking simple path (lazy) at bound: 12
+BMC-SP checking inductive step (initial states) at bound: 12
+BMC-SP checking base case at bound: 12
+
+BMC-SP current unrolling depth/bound: 13
+BMC-SP checking simple path (lazy) at bound: 13
+BMC-SP checking inductive step (initial states) at bound: 13
+BMC-SP checking base case at bound: 13
+
+BMC-SP current unrolling depth/bound: 14
+BMC-SP checking simple path (lazy) at bound: 14
+BMC-SP checking inductive step (initial states) at bound: 14
+BMC-SP checking base case at bound: 14
+
+BMC-SP current unrolling depth/bound: 15
+BMC-SP checking simple path (lazy) at bound: 15
+BMC-SP checking inductive step (initial states) at bound: 15
+BMC-SP checking base case at bound: 15
+
+BMC-SP current unrolling depth/bound: 16
+BMC-SP checking simple path (lazy) at bound: 16
+BMC-SP checking inductive step (initial states) at bound: 16
+BMC-SP checking base case at bound: 16
+
+BMC-SP current unrolling depth/bound: 17
+BMC-SP checking simple path (lazy) at bound: 17
+BMC-SP checking inductive step (initial states) at bound: 17
+BMC-SP checking base case at bound: 17
+
+BMC-SP current unrolling depth/bound: 18
+BMC-SP checking simple path (lazy) at bound: 18
+BMC-SP checking inductive step (initial states) at bound: 18
+BMC-SP checking base case at bound: 18
+
+BMC-SP current unrolling depth/bound: 19
+BMC-SP checking simple path (lazy) at bound: 19
+BMC-SP checking inductive step (initial states) at bound: 19
+BMC-SP checking base case at bound: 19
+
+BMC-SP current unrolling depth/bound: 20
+BMC-SP checking simple path (lazy) at bound: 20
+BMC-SP checking inductive step (initial states) at bound: 20
+BMC-SP checking base case at bound: 20
+
+BMC-SP current unrolling depth/bound: 21
+BMC-SP checking simple path (lazy) at bound: 21
+BMC-SP checking inductive step (initial states) at bound: 21
+BMC-SP checking base case at bound: 21
+
+BMC-SP current unrolling depth/bound: 22
+BMC-SP checking simple path (lazy) at bound: 22
+BMC-SP checking inductive step (initial states) at bound: 22
+BMC-SP checking base case at bound: 22
+
+BMC-SP current unrolling depth/bound: 23
+BMC-SP checking simple path (lazy) at bound: 23
+BMC-SP checking inductive step (initial states) at bound: 23
+BMC-SP checking base case at bound: 23
+
+BMC-SP current unrolling depth/bound: 24
+BMC-SP checking simple path (lazy) at bound: 24
+BMC-SP checking inductive step (initial states) at bound: 24
+BMC-SP checking base case at bound: 24
+
+BMC-SP current unrolling depth/bound: 25
+BMC-SP checking simple path (lazy) at bound: 25
+BMC-SP checking inductive step (initial states) at bound: 25
+BMC-SP checking base case at bound: 25
+
+BMC-SP current unrolling depth/bound: 26
+BMC-SP checking simple path (lazy) at bound: 26
+BMC-SP checking inductive step (initial states) at bound: 26
+BMC-SP checking base case at bound: 26
+
+BMC-SP current unrolling depth/bound: 27
+BMC-SP checking simple path (lazy) at bound: 27
+BMC-SP checking inductive step (initial states) at bound: 27
+BMC-SP checking base case at bound: 27
+
+BMC-SP current unrolling depth/bound: 28
+BMC-SP checking simple path (lazy) at bound: 28
+BMC-SP checking inductive step (initial states) at bound: 28
+BMC-SP checking base case at bound: 28
+
+BMC-SP current unrolling depth/bound: 29
+BMC-SP checking simple path (lazy) at bound: 29
+BMC-SP checking inductive step (initial states) at bound: 29
+BMC-SP checking base case at bound: 29
+
+BMC-SP current unrolling depth/bound: 30
+BMC-SP checking simple path (lazy) at bound: 30
+BMC-SP checking inductive step (initial states) at bound: 30
+BMC-SP checking base case at bound: 30
+
+BMC-SP current unrolling depth/bound: 31
+BMC-SP checking simple path (lazy) at bound: 31
+BMC-SP checking inductive step (initial states) at bound: 31
+BMC-SP checking base case at bound: 31
+
+BMC-SP current unrolling depth/bound: 32
+BMC-SP checking simple path (lazy) at bound: 32
+BMC-SP checking inductive step (initial states) at bound: 32
+BMC-SP checking base case at bound: 32
+
+BMC-SP current unrolling depth/bound: 33
+BMC-SP checking simple path (lazy) at bound: 33
+BMC-SP checking inductive step (initial states) at bound: 33
+BMC-SP checking base case at bound: 33
+
+BMC-SP current unrolling depth/bound: 34
+BMC-SP checking simple path (lazy) at bound: 34
+BMC-SP checking inductive step (initial states) at bound: 34
+BMC-SP checking base case at bound: 34
+
+BMC-SP current unrolling depth/bound: 35
+BMC-SP checking simple path (lazy) at bound: 35
+BMC-SP checking inductive step (initial states) at bound: 35
+BMC-SP checking base case at bound: 35
+
+BMC-SP current unrolling depth/bound: 36
+BMC-SP checking simple path (lazy) at bound: 36
+BMC-SP checking inductive step (initial states) at bound: 36
+BMC-SP checking base case at bound: 36
+
+BMC-SP current unrolling depth/bound: 37
+BMC-SP checking simple path (lazy) at bound: 37
+BMC-SP checking inductive step (initial states) at bound: 37
+BMC-SP checking base case at bound: 37
+
+BMC-SP current unrolling depth/bound: 38
+BMC-SP checking simple path (lazy) at bound: 38
+BMC-SP checking inductive step (initial states) at bound: 38
+BMC-SP checking base case at bound: 38
+
+BMC-SP current unrolling depth/bound: 39
+BMC-SP checking simple path (lazy) at bound: 39
+BMC-SP checking inductive step (initial states) at bound: 39
+BMC-SP checking base case at bound: 39
+
+BMC-SP current unrolling depth/bound: 40
+BMC-SP checking simple path (lazy) at bound: 40
+BMC-SP checking inductive step (initial states) at bound: 40
+BMC-SP checking base case at bound: 40
+
+BMC-SP current unrolling depth/bound: 41
+BMC-SP checking simple path (lazy) at bound: 41
+BMC-SP checking inductive step (initial states) at bound: 41
+BMC-SP checking base case at bound: 41
+
+BMC-SP current unrolling depth/bound: 42
+BMC-SP checking simple path (lazy) at bound: 42
+BMC-SP checking inductive step (initial states) at bound: 42
+BMC-SP checking base case at bound: 42
+
+BMC-SP current unrolling depth/bound: 43
+BMC-SP checking simple path (lazy) at bound: 43
+BMC-SP checking inductive step (initial states) at bound: 43
+BMC-SP checking base case at bound: 43
+
+BMC-SP current unrolling depth/bound: 44
+BMC-SP checking simple path (lazy) at bound: 44
+BMC-SP checking inductive step (initial states) at bound: 44
+BMC-SP checking base case at bound: 44
+
+BMC-SP current unrolling depth/bound: 45
+BMC-SP checking simple path (lazy) at bound: 45
+BMC-SP checking inductive step (initial states) at bound: 45
+BMC-SP checking base case at bound: 45
+
+BMC-SP current unrolling depth/bound: 46
+BMC-SP checking simple path (lazy) at bound: 46
+BMC-SP checking inductive step (initial states) at bound: 46
+BMC-SP checking base case at bound: 46
+
+BMC-SP current unrolling depth/bound: 47
+BMC-SP checking simple path (lazy) at bound: 47
+BMC-SP checking inductive step (initial states) at bound: 47
+BMC-SP checking base case at bound: 47
+
+BMC-SP current unrolling depth/bound: 48
+BMC-SP checking simple path (lazy) at bound: 48

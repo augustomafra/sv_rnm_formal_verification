@@ -1,0 +1,18 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 dac.smv 2>&1 | tee -a dac_prop1_ic3ia_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (<= _past_past_out _past_out) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= (- _past_past_out _past_out) (/ 1 256)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Generating implicit predicate abstraction.
+Number predicates found in init: 1
+Number predicates found in prop: 7
+Total number of initial predicates: 8
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+Subexpressions must have the same type:
+Equation: (= _past_out@1 0)
+Type 1: Real
+Type 2: Int
+
+error
+b1
+Pono wall clock time (s): 0.122684

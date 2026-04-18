@@ -1,0 +1,9 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=0 dac.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing09/../../../..//util/fp2real.sh | tee -a dac_prop0_fp_interp_msat.log
+Solving property: (= (ite (and (not (= (ite (and (not (fp.isNaN _past_out)) (not (fp.lt _past_out (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq _past_out (fp #b0 #b01111111110 #b1111111000000000000000000000000000000000000000000000) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Solving property: (= (ite (and (not (= (ite (and (not (fp.isNaN _past_out)) (not (fp.lt _past_out (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 255 256))) ))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (fp.leq _past_out (fp #b0 #b01111111110 #b1111111000000000000000000000000000000000000000000000) ((as_real (/ 255 256))) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Internal error: Expecting satisfiable result
+error
+b0
+Pono wall clock time (s): 0.0134736

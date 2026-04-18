@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=ismc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_ismc_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _rst #b0) (distinct (ite (fp.lt _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.geq _x (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _x _H) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Interpolation failed due to: Interpolation failure.
+error
+b1
+Pono wall clock time (s): 0.02028

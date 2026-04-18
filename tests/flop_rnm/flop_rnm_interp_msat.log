@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst flop_rnm.smv 2>&1 | tee -a flop_rnm_interp_msat.log
+Solving property: (let ((.def_26 (<= (to_real 0) _past_q))) (= (ite (or (not (= (ite (not (= (ite (or (not (= (ite (= (ite (not (<= _past_incr (to_real 0))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (= (ite (not .def_26) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (= (ite .def_26 (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _past_q _q) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Extending reached states (count: 2)
+Found a proof at bound: 1
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0183748

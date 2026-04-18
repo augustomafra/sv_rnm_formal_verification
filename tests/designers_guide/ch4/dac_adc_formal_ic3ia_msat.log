@@ -1,0 +1,21 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ic3ia  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst dac_adc_formal.smv 2>&1 | tee -a dac_adc_formal_ic3ia_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= _past_rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (not (<= |_idac#result| _past_past_adc_in)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (- (/ 1 256)) (+ |_idac#result| (* (to_real (- 1)) _past_past_adc_in))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Generating implicit predicate abstraction.
+Number predicates found in init: 2
+Number predicates found in prop: 4
+Total number of initial predicates: 6
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+1 new predicates added by refinement
+Blocking phase at frame 2
+Propagation phase at frame 2
+Blocking phase at frame 3
+264 new predicates added by refinement
+Blocking phase at frame 3
+Propagation phase at frame 3
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 23.5242

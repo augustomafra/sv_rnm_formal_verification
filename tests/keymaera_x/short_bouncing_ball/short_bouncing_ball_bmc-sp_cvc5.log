@@ -1,0 +1,40 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=bmc-sp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_bmc-sp_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (< _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+
+BMC-SP current unrolling depth/bound: 0
+BMC-SP checking simple path (lazy) at bound: 0
+BMC-SP checking base case at bound: 0
+
+BMC-SP current unrolling depth/bound: 1
+BMC-SP checking simple path (lazy) at bound: 1
+BMC-SP checking inductive step (initial states) at bound: 1
+BMC-SP checking base case at bound: 1
+
+BMC-SP current unrolling depth/bound: 2
+BMC-SP checking simple path (lazy) at bound: 2
+BMC-SP checking inductive step (initial states) at bound: 2
+BMC-SP checking base case at bound: 2
+
+BMC-SP current unrolling depth/bound: 3
+BMC-SP checking simple path (lazy) at bound: 3
+BMC-SP checking inductive step (initial states) at bound: 3
+BMC-SP checking base case at bound: 3
+
+BMC-SP current unrolling depth/bound: 4
+BMC-SP checking simple path (lazy) at bound: 4
+BMC-SP checking inductive step (initial states) at bound: 4
+BMC-SP checking base case at bound: 4
+
+BMC-SP current unrolling depth/bound: 5
+BMC-SP checking simple path (lazy) at bound: 5
+BMC-SP checking inductive step (initial states) at bound: 5
+BMC-SP checking base case at bound: 5
+
+BMC-SP current unrolling depth/bound: 6
+BMC-SP checking simple path (lazy) at bound: 6
+BMC-SP checking inductive step (initial states) at bound: 6
+BMC-SP checking base case at bound: 6
+
+BMC-SP current unrolling depth/bound: 7
+BMC-SP checking simple path (lazy) at bound: 7

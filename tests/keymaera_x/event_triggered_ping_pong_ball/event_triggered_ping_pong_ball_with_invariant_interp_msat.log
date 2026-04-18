@@ -1,0 +1,17 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 event_triggered_ping_pong_ball.smv 2>&1 | tee -a event_triggered_ping_pong_ball_with_invariant_interp_msat.log
+Solving property: (= (ite (or (not (= (ite (or (not (= (ite (or (not (= _valid (_ bv1 1))) (not (= _rst (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (and (not (= (ite (<= _past_x (to_real 5)) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= (to_real 0) _past_x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (or (not (= (ite (not (= _past_x (to_real 5))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _past_v (to_real 0)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite (<= (to_real 0) _x) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x (to_real 5)) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))
+Got input variables in property. Promoting them to states.
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Extending reached states (count: 1)
+Checking interpolation at bound: 3
+Extending reached states (count: 1)
+Extending reached states (count: 2)
+Extending reached states (count: 3)
+Extending reached states (count: 4)
+Found a proof at bound: 3
+Property 0 is TRUE
+unsat
+Pono wall clock time (s): 0.0988529

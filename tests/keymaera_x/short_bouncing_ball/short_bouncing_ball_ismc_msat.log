@@ -1,0 +1,17 @@
+timeout 100s pono --print-wall-time --smt-solver=msat --engine=ismc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_ismc_msat.log
+Solving property: (let ((.def_77 (<= (to_real 0) _x))) (= (ite (or (not (= (ite (or (not (= _rst (_ bv0 1))) (not (= (ite (not .def_77) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (and (not (= (ite .def_77 (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (not (= (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Running ISMC at bound: 2
+Running ISMC at bound: 3
+Running ISMC at bound: 4
+Running ISMC at bound: 5
+Running ISMC at bound: 6
+Running ISMC at bound: 7
+Running ISMC at bound: 8
+Running ISMC at bound: 9
+Interpolation failed due to: Had at least one interpolation failure in get_sequence_interpolants.
+error
+b1
+Pono wall clock time (s): 0.895385

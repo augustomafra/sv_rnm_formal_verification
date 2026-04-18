@@ -1,0 +1,14 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ismc  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 event_triggered_ping_pong_ball.smv 2>&1 | tee -a event_triggered_ping_pong_ball_with_invariant_ismc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (bvnot _valid) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (and (distinct (ite (>= 5.0 _past_x) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (>= _past_x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (or (distinct (ite (distinct _past_x 5.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _past_v 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x 5.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Running ISMC at bound: 2
+ISMC failed due to: Subexpressions must have the same type:
+Equation: (= _v@1 0)
+Type 1: Real
+Type 2: Int
+
+Property 0 is UNKNOWN
+unknown
+Pono wall clock time (s): 0.0253627

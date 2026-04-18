@@ -1,0 +1,8 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=interp  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=0 dac.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/designers_guide/ch4/listing09/../../../..//util/fp2real.sh | tee -a dac_prop0_fp_interp_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (and (distinct (ite (fp.geq _past_out (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0) (distinct (ite (fp.leq _past_out (fp #b0 #b01111111110 #b1111111000000000000000000000000000000000000000000000) ((as_real 0.0)) ) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (and (distinct (ite (fp.geq _past_out (fp #b0 #b00000000000 #b0000000000000000000000000000000000000000000000000000) ((as_real (/ 255 256))) ) #b1 #b0) #b0) (distinct (ite (fp.leq _past_out (fp #b0 #b01111111110 #b1111111000000000000000000000000000000000000000000000) ((as_real (/ 255 256))) ) #b1 #b0) #b0)) #b1 #b0) #b1))
+Caught generic exception...
+invalid symbol '|_dac_fv#result|@1', symbol is not SMT-LIB compliant
+error
+b0
+Pono wall clock time (s): 0.0110711

@@ -1,0 +1,17 @@
+timeout 100s pono --print-wall-time --smt-solver=bzla --engine=ic3ia  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst capacitor.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/capacitor/../../util/fp2real.sh | tee -a capacitor_fp_ic3ia_bzla.log
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _past_rst #b0) (distinct (ite (fp.gt (fp.sub RNE _past_v _v) (fp #b0 #b01111101011 #b0000110001101111011110100000101101011110110110001101) ((as_real (/ 4722366482869645 4722366482869645213696))) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.leq (fp #b1 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ 4722366482869645 4722366482869645213696)))  _v) #b1 #b0) #b0) (distinct (ite (fp.leq _v (fp #b0 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ 4722366482869645 4722366482869645213696))) ) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _past_rst #b0) (distinct (ite (fp.gt (fp.sub RNE _past_v _v) (fp #b0 #b01111101011 #b0000110001101111011110100000101101011110110110001101) ((as_real (/ (- 3346977244733861) 590295810358705651712))) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.leq (fp #b1 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ (- 3346977244733861) 590295810358705651712)))  _v) #b1 #b0) #b0) (distinct (ite (fp.leq _v (fp #b0 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ (- 3346977244733861) 590295810358705651712))) ) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Solving property: (or (not (= #b1 #b1)) (= (ite (or (distinct (ite (or (distinct _past_rst #b0) (distinct (ite (fp.gt (fp.sub RNE _past_v _v) (fp #b0 #b01111101011 #b0000110001101111011110100000101101011110110110001101) ((as_real (/ 3346977244733861 590295810358705651712))) ) #b1 #b0) #b0)) #b1 #b0) #b0) (distinct (ite (and (distinct (ite (fp.leq (fp #b1 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ 3346977244733861 590295810358705651712)))  _v) #b1 #b0) #b0) (distinct (ite (fp.leq _v (fp #b0 #b01111101101 #b0111110010000001110110111011011111001100001101001010) ((as_real (/ 3346977244733861 590295810358705651712))) ) #b1 #b0) #b0)) #b1 #b0) #b0)) #b1 #b0) #b1))
+Generating implicit predicate abstraction.
+Number predicates found in init: 1
+Number predicates found in prop: 9
+Total number of initial predicates: 10
+WARNING automatically disabling predecessor generalization -- not supported in IC3IA yet.
+Checking if initial states satisfy property
+Checking if property can be violated in one-step
+Blocking phase at frame 2
+IC3IA: refinement failed couldn't find any new predicates
+IC3Base: refinement failure, returning unknown
+Property 0 is UNKNOWN
+unknown
+Pono wall clock time (s): 2.20477

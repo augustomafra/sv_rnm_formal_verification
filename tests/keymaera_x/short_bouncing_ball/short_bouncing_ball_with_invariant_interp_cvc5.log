@@ -1,0 +1,13 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=interp  --verbosity=1 --bound=999 --verbosity=1 --bound=999 --reset=_rst --prop=0 short_bouncing_ball.smv 2>&1 | tee -a short_bouncing_ball_with_invariant_interp_cvc5.log
+Solving property: (let ((_let_1 (* 2.0 _g))) (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (< _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (< _past_x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (bvnot (bvand (ite (= (* _let_1 _past_x) (- (* _let_1 _H) (* _v _v))) (_ bv1 1) (_ bv0 1)) (ite (>= _past_x 0.0) (_ bv1 1) (_ bv0 1)))) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (>= _x 0.0) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (<= _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1))))
+Got input variables in property. Promoting them to states.
+Checking interpolation at bound: 0
+Checking interpolation at bound: 1
+Extending reached states (count: 1)
+Checking interpolation at bound: 2
+Extending reached states (count: 1)
+Checking interpolation at bound: 3
+Failed when computing interpolant.
+Property 0 is UNKNOWN
+unknown
+Pono wall clock time (s): 0.15298

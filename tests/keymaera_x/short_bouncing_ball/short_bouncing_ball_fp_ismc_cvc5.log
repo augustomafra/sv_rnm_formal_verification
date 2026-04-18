@@ -1,0 +1,10 @@
+timeout 100s pono --print-wall-time --smt-solver=cvc5 --engine=ismc  --verbosity=1 --bound=999 --smv-fp-semantics --verbosity=1 --bound=999 --smv-fp-semantics --reset=_rst --prop=1 short_bouncing_ball.smv 2>&1 | /vols/jasper_users/augusto/rnm_formal_verification/sv_rnm_formal_verification/tests/keymaera_x/short_bouncing_ball/../../../util/fp2real.sh | tee -a short_bouncing_ball_fp_ismc_cvc5.log
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (fp.lt _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (fp.geq _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Solving property: (or (not (= (_ bv1 1) (_ bv1 1))) (= (ite (or (distinct (ite (or (distinct _rst (_ bv0 1)) (distinct (ite (fp.lt _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (and (distinct (ite (fp.geq _x (fp (_ bv0 1) (_ bv0 11) (_ bv0 52)) ((as_real 0.0)) ) (_ bv1 1) (_ bv0 1)) (_ bv0 1)) (distinct (ite (fp.leq _x _H) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv0 1))) (_ bv1 1) (_ bv0 1)) (_ bv1 1)))
+Got input variables in property. Promoting them to states.
+Running ISMC at bound: 0
+Running ISMC at bound: 1
+Interpolation failed due to: Interpolation failure.
+error
+b1
+Pono wall clock time (s): 0.0576708
