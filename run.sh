@@ -4,7 +4,7 @@ set -euo pipefail
 
 TIMEOUT="100s"
 
-NJOBS="16"
+NJOBS="4"
 
 VERBOSITY="1"
 
