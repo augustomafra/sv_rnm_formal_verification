@@ -88,7 +88,7 @@ make install
 # Usage
 - Run `run.sh` to automatically build and run all benchmarks.
 - Resource requirements: this experiment runs using 4 cores in a 64GB machine in
-around 150min. Increase the number of cores in the NJOBS variable in `run.sh` for
+around 120min. Increase the number of cores in the NJOBS variable in `run.sh` for
 faster run time if you have more memory available.
 ## Details
 - `make build`: only build benchmarks.
