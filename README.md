@@ -3,7 +3,8 @@
 # Summary
 This repository contains the public benchmarks for evaluation of Formal
 Verification of Mixed-Signal Systems Using Real Number Modeling on an SMT-Based
-Model Checker. It is organized as follows:
+Model Checker. Results from the experiment run are already provided as the run
+log files in each test directory and summarized in the results.csv file.
 
 - `setup.sh`: Bash script for automatically installing all dependencies. See
 Setup section for details about the steps performed here.
@@ -90,6 +91,8 @@ make install
 - Resource requirements: this experiment runs using 4 cores in a 64GB machine in
 around 120min. Increase the number of cores in the NJOBS variable in `run.sh` for
 faster run time if you have more memory available.
+- Run `python3 plot.py > my_results.csv` to parse all run logs into the CSV
+file `my_results.csv`.
 ## Details
 - `make build`: only build benchmarks.
 - `make prove | all`: build and run all benchmarks. It is the default target.
