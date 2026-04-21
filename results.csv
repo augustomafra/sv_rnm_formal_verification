@@ -13,7 +13,7 @@ PCM_ANA_prop1_fp,unsat,,bzla,ind,fp,0.0202643,confidential/confidential12.log
 PCM_ANA_prop2,unsat,,msat,ind,ra,0.0230887,confidential/confidential13.log
 PCM_ANA_prop2_fp,unsat,,bzla,ind,fp,0.0236346,confidential/confidential14.log
 PCM_ANA_prop0,unsat,,msat,ind,ra,0.021523,confidential/confidential15.log
-PCM_ANA_prop0_fp,sat,0,bzla,bmc,fp,0.0241164,confidential/confidential16.log
+PCM_ANA_prop0_fp,unsat,,bzla,ind,fp,0.0234192,confidential/confidential16.log
 VREG,unsat,,msat,ind,ra,0.0317082,confidential/confidential17.log
 VREG_fp,unknown,11,bzla,bmc,fp,100.0,confidential/confidential18.log
 low_pass_2nd_order,unsat,,msat,ind,ra,0.0259419,confidential/confidential19.log
@@ -39,7 +39,7 @@ adc_fp,unsat,,bzla,ind,fp,20.5581,tests/designers_guide/ch4/listing12/adc_fp_ind
 flop_rnm,unsat,,msat,mbic3,ra,0.0126274,tests/flop_rnm/flop_rnm_mbic3_msat.log
 flop_rnm_fp,unsat,,bzla,ind,fp,0.196105,tests/flop_rnm/flop_rnm_fp_ind_bzla.log
 damped_oscillator,unknown,1,cvc5,bmc,ra,100.0,tests/keymaera_x/damped_oscillator/damped_oscillator_bmc_cvc5.log
-damped_oscillator_fp,sat,1,bzla,bmc,fp,2.39222,tests/keymaera_x/damped_oscillator/damped_oscillator_fp_bmc_bzla.log
+damped_oscillator_fp,unknown,1,bzla,bmc,fp,100,tests/keymaera_x/damped_oscillator/damped_oscillator_fp_bmc_bzla.log
 event_triggered_ping_pong_ball,unsat,,msat,ic3ia,ra,0.0511148,tests/keymaera_x/event_triggered_ping_pong_ball/event_triggered_ping_pong_ball_ic3ia_msat.log
 event_triggered_ping_pong_ball_fp,unsat,,bzla,ind,fp,44.6785,tests/keymaera_x/event_triggered_ping_pong_ball/event_triggered_ping_pong_ball_fp_ind_bzla.log
 event_triggered_ping_pong_ball_with_invariant,unsat,,msat,interp,ra,0.0988529,tests/keymaera_x/event_triggered_ping_pong_ball/event_triggered_ping_pong_ball_with_invariant_interp_msat.log
