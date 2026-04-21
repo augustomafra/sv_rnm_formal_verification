@@ -33,7 +33,7 @@ by the environment variable `MATHSAT_EXTERNAL_INSTALL_PATH`.
 ```
 git clone -b bitwuzla_floating_point_theory https://github.com/augustomafra/smt-switch.git
 cd smt-switch
-git checkout bitwuzla_floating_point_theory
+git checkout 5815833ed9b553ef594a8236b1b0ca323fc6c1f5
 ```
 2. Configure and build Smt-Switch:
 ```
@@ -53,7 +53,7 @@ cd .. # Return to root path
 ```
 git clone -b smv_fp_only https://github.com/augustomafra/pono
 cd pono
-git checkout smv_fp_only
+git checkout 3e1453cfa5d18616b05424c8af00d74aa41b4292
 ```
 2. Configure and build Pono. Note that we do not use all settings from Pono's
 repository README because we need to link against the Smt-Switch built in step
@@ -76,7 +76,7 @@ cd .. # Return to root path
 ```
 git clone -b real_number_formal_modeling https://github.com/augustomafra/yosys
 cd yosys
-git checkout real_number_formal_modeling
+git checkout a726634e9e9883709f94c5e479ce8558af3da704
 git submodule update --init --recursive
 ```
 2. Configure and build Yosys:
