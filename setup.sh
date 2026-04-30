@@ -10,11 +10,10 @@ then
 fi
 
 # 1. MathSAT
-if [ -z "${MATHSAT_EXTERNAL_INSTALL_PATH+x}" ]
-then
-    echo "error: Instal path for MathSAT must be set at environment variable 'MATHSAT_EXTERNAL_INSTALL_PATH'"
-    exit 1
-fi
+export MATHSAT_VERSION="mathsat-5.6.11-linux-x86_64"
+export MATHSAT_EXTERNAL_INSTALL_PATH="`pwd -P`/${MATHSAT_VERSION}"
+wget "https://mathsat.fbk.eu/release/${MATHSAT_VERSION}.tar.gz"
+tar -xf "${MATHSAT_VERSION}.tar.gz"
 
 # 2. Smt-Switch
 git clone -b bitwuzla_floating_point_theory https://github.com/augustomafra/smt-switch.git

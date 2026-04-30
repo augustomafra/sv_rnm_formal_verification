@@ -22,10 +22,14 @@ Alternatively, the same steps in that script are described below and can be
 executed/modified according to your custom needs.
 
 #### 1. MathSAT
-1. The installation of MathSAT SMT solver must be obtained independently. User
-is responsible for meeting license conditions.
-2. The setup steps below assume MathSAT has been installed in the path pointed
-by the environment variable `MATHSAT_EXTERNAL_INSTALL_PATH`.
+1. Download MathSAT solver. User is responsible for meeting its license
+conditions.
+```
+export MATHSAT_VERSION="mathsat-5.6.11-linux-x86_64"
+export MATHSAT_EXTERNAL_INSTALL_PATH="`pwd -P`/${MATHSAT_VERSION}"
+wget "https://mathsat.fbk.eu/release/${MATHSAT_VERSION}.tar.gz"
+tar -xf "${MATHSAT_VERSION}.tar.gz"
+```
 
 #### 2. Smt-Switch
 1. Clone fork of [Smt-Switch](https://github.com/augustomafra/smt-switch/tree/bitwuzla_floating_point_theory) repository and checkout branch
@@ -44,7 +48,7 @@ ln -s $MATHSAT_EXTERNAL_INSTALL_PATH deps/mathsat
 cd build
 make
 make install
-cd .. # Return to root path
+cd ../.. # Return to root path
 ```
 
 #### 3. Pono
@@ -67,7 +71,7 @@ ln -s $MATHSAT_EXTERNAL_INSTALL_PATH deps/mathsat
 cd build
 make
 make install
-cd .. # Return to root path
+cd ../.. # Return to root path
 ```
 
 #### 4. Yosys
