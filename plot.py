@@ -123,8 +123,9 @@ if DUMP_FULL_TABLE:
 
             theory = "fp" if result.is_floating_point else "ra"
             table[test_name][result.solver][result.engine][theory] = \
-                "error" if result.result == SAT or result.result == ERROR \
-                    else str(round(result.time * 1000)) if result.time < 100 else "timeout"
+                "max" if result.time >= 100 \
+                    else str(round(result.time * 1000)) if result.result == UNSAT \
+                    else "-"
 
     csv_output = dict()
     for test, data1 in table.items():
