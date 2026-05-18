@@ -39,6 +39,8 @@ ENGINES = [
     "msat-ic3ia"
 ]
 
+DUMP_FULL_TABLE = False
+
 SAT = "sat\n"
 UNSAT = "unsat\n"
 UNKNOWN = "unknown\n"
@@ -104,6 +106,56 @@ for makefile in MAKEFILES:
                     result.time = float(match.group(1))
                 elif match := core_re.search(line):
                     result.result = ERROR
+
+if DUMP_FULL_TABLE:
+    table = dict()
+    for test, result_list in results.items():
+        test_name = test.replace("_fp", "")
+        for result in result_list:
+            if result.engine == "bmc":
+                continue
+            if test_name not in table:
+                table[test_name] = dict()
+            if result.solver not in table[test_name]:
+                table[test_name][result.solver] = dict()
+            if result.engine not in table[test_name][result.solver]:
+                table[test_name][result.solver][result.engine] = dict()
+
+            theory = "fp" if result.is_floating_point else "ra"
+            table[test_name][result.solver][result.engine][theory] = \
+                "error" if result.result == SAT or result.result == ERROR \
+                    else str(round(result.time * 1000)) if result.time < 100 else "timeout"
+
+    csv_output = dict()
+    for test, data1 in table.items():
+        csv_output[test] = list()
+        for solver in SOLVERS:
+            data2 = data1[solver]
+            for engine in ENGINES[1:]: # Skip BMC engine
+                if engine not in data2:
+                    csv_output[test].append("")
+                    csv_output[test].append("")
+                    continue
+                data3 = data2[engine]
+                if "ra" in data3:
+                    ra_time = data3["ra"]
+                    csv_output[test].append(ra_time)
+                else:
+                    csv_output[test].append("")
+                fp_time = data3["fp"]
+                csv_output[test].append(fp_time)
+
+    print("Benchmark", end="")
+    for solver in SOLVERS:
+        for engine in ENGINES[1:]: # Skip BMC engine
+            print(f",{solver}+{engine}+ra", end="")
+            print(f",{solver}+{engine}+fp", end="")
+    print("")
+    for test, data in csv_output.items():
+        data_str = ",".join(data)
+        print(f"{test},{data_str}")
+
+    exit(0)
 
 best_results = dict()
 for test, result_list in results.items():
